@@ -376,15 +376,21 @@ button {
   transition: all 0.3s ease;
   cursor: pointer;
   font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
 }
 .section_banner-media .media-section .toggle-section .toggle-btn:hover {
   color: #fff;
   background-color: #222;
 }
+.section_banner-media .media-section .toggle-section img {
+  width: 20%;
+}
 .section_banner-media .media-section #creator-toggle:checked ~ .toggle-section label[for=creator-toggle],
 .section_banner-media .media-section #user-toggle:checked ~ .toggle-section label[for=user-toggle] {
-  background-color: #fff;
-  color: #000;
+  background-color: #000;
+  color: #fff;
   font-weight: 600;
 }
 .section_banner-media .media-section .view {
@@ -1016,9 +1022,15 @@ button {
 
 .grid-spacing {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(1, 1fr);
   gap: 8px;
+}
+@media screen and (min-width:768px) {
+  .grid-spacing {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
 }
 .grid-spacing .grid-item-two {
   grid-row: span 2/span 2;
@@ -1364,9 +1376,12 @@ button {
   background: none !important;
 }
 
-.notification-stack {
+.notification-section {
+  margin: 2rem;
+}
+.notification-section .notification-stack {
   position: relative;
-  width: 455px;
+  width: 100;
   height: 140px;
 }
 
@@ -1427,7 +1442,7 @@ button {
 .notification-card::after {
   content: "";
   position: absolute;
-  top: 45px;
+  top: 48px;
   left: 20px;
   height: 100%;
   border-radius: 18px;
@@ -1439,13 +1454,13 @@ button {
 .notification-card::before {
   width: 92%;
   opacity: 0.7;
-  left: 14px;
+  left: 17px;
 }
 
 .notification-card::after {
   width: 84%;
   opacity: 0.45;
-  left: 28px;
+  left: 37px;
 }
 
 /* Subtle hover lift */
