@@ -218,30 +218,6 @@ button {
   font-weight: 700;
   margin-bottom: 2.0833333333vw;
 }
-.section_marqee-slide {
-  margin: 0 auto;
-  width: 80%;
-  overflow: hidden;
-  position: relative;
-}
-.section_marqee-slide .marquee-items {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 2rem 0;
-  animation: marquee 15s linear infinite;
-  width: -moz-max-content;
-  width: max-content;
-  gap: 2.7777777778vw;
-}
-@media screen and (min-width:768px) {
-  .section_marqee-slide .marquee-items figure > img {
-    width: 220px;
-  }
-}
-.section_marqee-slide:hover .marquee-items {
-  animation-play-state: paused;
-}
 .section_middle-one {
   height: auto;
   justify-content: space-between;
@@ -1124,14 +1100,6 @@ button {
   transform-origin: left;
 }
 
-@keyframes marquee {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
-}
 /*==========================
   RESPONSIVE HEADER WITH HAMBURGER MENU
 ===========================*/
@@ -1484,4 +1452,28 @@ button {
 .notification-card:hover {
   transform: translateY(-3px);
   transition: transform 0.3s ease;
+}
+
+.marquee-container {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.marquee-items {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  will-change: transform;
+}
+
+.marquee-items figure {
+  flex: 0 0 auto;
+  width: 160px;
+  margin: 0;
+}
+.marquee-items figure img {
+  width: 100%;
+  display: block;
+  filter: brightness(0.8);
 }/*# sourceMappingURL=style.css.map */
