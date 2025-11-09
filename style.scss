@@ -1718,7 +1718,7 @@ button {
 .notification-card::after {
     content: "";
     position: absolute;
-    top: 45px;
+    top: 48px;
     left: 20px;
     height: 100%;
     border-radius: 18px;
@@ -1731,14 +1731,14 @@ button {
 .notification-card::before {
     width: 92%;
     opacity: 0.7;
-    left: 14px;
+    left: 17px;
 }
 
 
 .notification-card::after {
     width: 84%;
     opacity: 0.45;
-    left: 28px;
+    left: 37px;
 }
 
 /* Subtle hover lift */
