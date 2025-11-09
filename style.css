@@ -329,7 +329,12 @@ button {
   height: auto;
 }
 .section_grid-masonry .grid-item-one {
-  padding-right: 3rem;
+  padding-right: 0rem;
+}
+@media screen and (min-width:768px) {
+  .section_grid-masonry .grid-item-one {
+    padding-right: 3rem;
+  }
 }
 .section_grid-masonry .grid-item-one .format-two {
   height: 100%;
@@ -366,10 +371,15 @@ button {
   /* Show correct view */
 }
 .section_banner-media .media-section > h2 {
-  font-size: 3.125rem;
+  font-size: 2.5rem;
   line-height: normal;
   font-weight: 700;
   margin-bottom: 1.3888888889vw;
+}
+@media screen and (min-width:768px) {
+  .section_banner-media .media-section > h2 {
+    font-size: 3.125rem;
+  }
 }
 .section_banner-media .media-section > p {
   font-size: 1.25rem;
@@ -382,7 +392,7 @@ button {
 }
 .section_banner-media .media-section .toggle-section {
   display: inline-flex;
-  gap: 1rem;
+  gap: 0rem;
   border: 1px dashed #444;
   border-radius: 50px;
   padding: 0.5rem 0.75rem;
@@ -1053,12 +1063,13 @@ button {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: repeat(1, 1fr);
-  gap: 8px;
+  gap: 90px;
 }
 @media screen and (min-width:768px) {
   .grid-spacing {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
+    grid: 8px;
   }
 }
 .grid-spacing .grid-item-two {
@@ -1290,7 +1301,6 @@ button {
   transform: translateY(2.0833333333vw);
   animation: fadeInUp 0.8s ease-out forwards;
   animation-delay: 1.1s;
-  margin-top: 1rem;
 }
 
 @keyframes landingFadeUp {
@@ -1401,7 +1411,12 @@ button {
 }
 
 .notification-section {
-  margin: 2rem;
+  margin: 1rem;
+}
+@media screen and (min-width:768px) {
+  .notification-section {
+    margin: 2rem;
+  }
 }
 .notification-section .notification-stack {
   position: relative;
