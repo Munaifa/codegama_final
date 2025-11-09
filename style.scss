@@ -1248,13 +1248,17 @@ button {
 
 .grid-spacing {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
     gap: 8px;
-
+ @media #{$md} {
+                     grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+                }
     .grid-item-two {
         grid-row: span 2 / span 2;
     }
+    
 }
 
 .flex-spacing {
@@ -1442,12 +1446,13 @@ button {
         opacity: 0;
         visibility: hidden;
         transition: all 0.5s ease;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: vw(30);
-        z-index: 1000;
+            display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: flex-start;
+    padding: 2rem;
+    gap: 2.0833333333vw;
+    z-index: 1000;
 
         a {
             color: $white;
@@ -1512,6 +1517,7 @@ button {
         transform: translateY(vw(30));
         animation: fadeInUp 0.8s ease-out forwards;
         animation-delay: 1.1s;
+        margin-top: 1rem;
     }
 }
 
@@ -1646,9 +1652,10 @@ button {
 }
 
 .notification-section {
+    margin: 2rem;
     .notification-stack {
         position: relative;
-        width: 455px;
+        width: 100%;
         height: 140px;
     }
 

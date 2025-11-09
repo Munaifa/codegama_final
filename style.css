@@ -1051,9 +1051,15 @@ button {
 
 .grid-spacing {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(1, 1fr);
   gap: 8px;
+}
+@media screen and (min-width:768px) {
+  .grid-spacing {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
 }
 .grid-spacing .grid-item-two {
   grid-row: span 2/span 2;
@@ -1222,8 +1228,9 @@ button {
   transition: all 0.5s ease;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: start;
+  justify-content: flex-start;
+  padding: 2rem;
   gap: 2.0833333333vw;
   z-index: 1000;
 }
@@ -1283,6 +1290,7 @@ button {
   transform: translateY(2.0833333333vw);
   animation: fadeInUp 0.8s ease-out forwards;
   animation-delay: 1.1s;
+  margin-top: 1rem;
 }
 
 @keyframes landingFadeUp {
@@ -1392,9 +1400,12 @@ button {
   background: none !important;
 }
 
+.notification-section {
+  margin: 2rem;
+}
 .notification-section .notification-stack {
   position: relative;
-  width: 455px;
+  width: 100%;
   height: 140px;
 }
 .notification-section .notification-card {
