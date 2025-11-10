@@ -1501,4 +1501,32 @@ button {
 .notification-card:hover {
   transform: translateY(-3px);
   transition: transform 0.3s ease;
+}
+
+.section_table .table-container table tr td:nth-of-type(2) {
+  background-color: rgba(19, 87, 37, 0.97);
+  position: relative;
+  border-bottom: 1px solid #2ae06f; /* brighter green for contrast */
+}
+
+thead th:nth-child(2)::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-15deg);
+  width: 160%;
+  height: 4px;
+  background: linear-gradient(90deg, #00ff66, #00cc44);
+  border-radius: 50%;
+  box-shadow: 0 0 20px #00ff66, 0 0 30px #00ff44;
+  z-index: 3;
+}
+
+.img_tag span {
+  display: inline-flex;
+  gap: 5px;
+}
+.img_tag span img {
+  width: 20%;
 }/*# sourceMappingURL=style.css.map */
