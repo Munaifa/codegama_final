@@ -2,12 +2,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const marquees = document.querySelectorAll(".marquee-items");
 
   marquees.forEach((marquee) => {
-    // Clone children once for seamless looping
     const clone = marquee.cloneNode(true);
     marquee.append(...clone.children);
 
     let x = 0;
-    const speed = 0.5 + Math.random() * 0.3; // slight variation per marquee
+    const speed = 0.5 + Math.random() * 0.3; 
 
     function move() {
       x -= speed;
