@@ -1010,9 +1010,14 @@ button {
   transition: opacity 0.5s ease;
 }
 .card.format-float.one {
-  min-height: 80vh;
+  min-height: 60vh;
   display: flex;
   flex: 0 1 33.3333333333%;
+}
+@media screen and (min-width:768px) {
+  .card.format-float.one {
+    min-height: 80vh;
+  }
 }
 @media screen and (min-width:950px) {
   .card.format-float.one {
@@ -1039,7 +1044,13 @@ button {
   position: absolute;
   right: 0;
   left: 0;
-  padding: 2.0833333333vw;
+  padding: 3.4722222222vw;
+  line-height: 1.5;
+}
+@media screen and (min-width:768px) {
+  .card.format-float .float-card-details {
+    padding: 2.0833333333vw;
+  }
 }
 .card.format-float .float-card-details.bottom {
   position: static;
@@ -1069,7 +1080,7 @@ button {
   .grid-spacing {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    grid: 8px;
+    gap: 8px;
   }
 }
 .grid-spacing .grid-item-two {

@@ -1184,10 +1184,12 @@ button {
         }
 
         &.one {
-            min-height: 80vh;
+            min-height: 60vh;
             display: flex;
             flex: 0 1 calc(100% / 3);
-
+            @media #{$md} {
+                min-height: 80vh;
+            }
             @media #{$lg} {
                 min-height: 90vh;
             }
@@ -1226,7 +1228,12 @@ button {
             position: absolute;
             right: 0;
             left: 0;
-            padding: vw(30);
+             padding: vw(50);
+                    line-height: 1.5;
+            @media #{$md} {
+                padding: vw(30);
+                   
+                }
 
             &.bottom {
                 @media #{$md} {
@@ -1260,7 +1267,7 @@ button {
  @media #{$md} {
                      grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    grid: 8px;
+    gap: 8px;
                 }
     .grid-item-two {
         grid-row: span 2 / span 2;
